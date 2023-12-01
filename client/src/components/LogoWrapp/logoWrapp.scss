@@ -1,0 +1,51 @@
+@import url('../../App.css');
+@import '../../mixins';
+
+
+.logo{
+    @include content-width();
+    margin: 38px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__items{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 300px;
+        width: 100%;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+    }
+    &__wrapp{
+        display: inline-block;
+        background: var(--second-color);
+        border-radius: 100%;
+        overflow: hidden;
+        width: 80px;
+        height: 80px;
+        img{
+            @include img-width();
+        }
+    }
+    .site__name{
+        background: var(--first-color);
+        display: inline-block;
+        padding: 16px 100px;
+        @include border-global();
+        margin: 0 0 10px 0;
+    }
+    .description{
+        background: var(--second-color);
+        display: inline-block;
+        padding: 10px 75px;
+    }
+    &__item{
+        background: var(--second-color);
+        display: inline-block;
+        padding: 20.5px 90px;
+        @include border-global();
+    }
+}

@@ -1,0 +1,29 @@
+@import url('../../App.css');
+@import '../../mixins';
+
+
+.second{
+    @include content-width();
+    margin: 22px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    &__text{
+        max-width: 887px;
+        width: 100%;
+        max-height: 106px;
+        display: inline-block;
+        background: var(--second-color);
+        @include border-global();
+    }
+    &__img{
+        max-width: 197px;
+        width: 100%;
+        max-height: 197px;
+        overflow: hidden;
+        background: var(--second-color);
+        @include border-second();
+        img{
+            @include img-width();
+        }
+    }
+}

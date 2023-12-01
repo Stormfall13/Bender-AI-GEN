@@ -1,0 +1,174 @@
+@import url("../../App.css");
+.editor {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  transition: 0.5s;
+}
+.editor__desc {
+  color: #878787;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 22.8px;
+}
+.editor__title {
+  color: #27AB4A;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22.8px;
+}
+.editor__wrapp {
+  max-width: 805px;
+  width: 100%;
+  min-height: 595px;
+  background: #fff;
+  border-radius: 4px;
+}
+.editor__head {
+  display: flex;
+  justify-content: space-between;
+  max-width: 747px;
+  width: 100%;
+  margin: 32px auto;
+}
+.editor__tools {
+  max-width: 132px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.editor__tools div {
+  display: inline-block;
+  cursor: pointer;
+}
+.editor__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 410px;
+  width: 100%;
+}
+.editor .btn__gpt {
+  max-width: 268px;
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #FFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background: #29B3BC;
+  border-radius: 4px;
+}
+.editor .btn__gpt .gpt__icon {
+  margin: 0 0 0 10px;
+}
+.editor .btn__gpt:active {
+  background: #0C9199;
+  transition: 0.3s;
+}
+
+.editor::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.eckditor {
+  max-width: 747px;
+  width: 100%;
+  margin: 0 auto;
+}
+.eckditor__title {
+  color: #212121;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.8px;
+  letter-spacing: 0.42px;
+}
+.eckditor__panel {
+  max-width: 747px;
+  overflow: hidden;
+}
+.eckditor__panel img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.eckditor__textarea {
+  outline: none;
+  border-top: 0;
+  border-left: 1px solid var(--first-color);
+  border-right: 1px solid var(--first-color);
+  border-bottom: 1px solid var(--first-color);
+  border-radius: 0;
+  max-width: 741px;
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+  bottom: 4px;
+  font-family: "Open Sans", sans-serif;
+  color: #212121;
+  font-weight: 400;
+}
+.eckditor__textarea::after {
+  content: "";
+  border: 1px solid #D7D7D7;
+  background: #F1F1F1;
+  position: absolute;
+  width: 100%;
+  min-height: 28px;
+  bottom: 0;
+}
+
+.button__wrapp {
+  display: flex;
+  max-width: 747px;
+  width: 100%;
+  margin: 30px auto 30px auto;
+}
+.button__wrapp-submit, .button__wrapp-save, .button__wrapp-esc {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.8px;
+  letter-spacing: 0.28px;
+  max-width: 185px;
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin: 0 7px 0 0;
+  cursor: pointer;
+}
+.button__wrapp-submit {
+  color: #fff;
+  background: #29BC50;
+}
+.button__wrapp-submit:hover {
+  transition: 0.3s;
+  filter: drop-shadow(0px 4px 4px rgba(18, 121, 46, 0.6));
+}
+.button__wrapp-save, .button__wrapp-esc {
+  color: #000;
+  background: #ECECEC;
+}
+.button__wrapp-save:hover, .button__wrapp-esc:hover {
+  transition: 0.3s;
+  filter: drop-shadow(0px 4px 4px rgba(204, 204, 204, 0.6));
+}/*# sourceMappingURL=editor.css.map */

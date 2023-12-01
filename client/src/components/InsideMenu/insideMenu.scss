@@ -1,0 +1,79 @@
+@import url('../../App.css');
+@import '../../mixins';
+
+.inside{
+    @include content-width();
+    margin: 29px auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+    &__panel{
+        background: var(--second-color);
+        display: inline-block;
+        max-width: 280px;
+        width: 100%;
+        min-height: 48px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        @include border-second();
+    }
+    &__panel-img{
+        width: 24px;
+        height: 16px;
+        margin: 0 0 0 20px;
+        img{
+            @include img-width();
+        }
+    }
+    &__search{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        max-width: 714px;
+        width: 100%;
+        min-height: 48px;
+        background: var(--second-color);
+        @include border-second();
+        position: relative;
+    }
+    &__search::after{
+        content: '';
+        background: var(--first-color);
+        position: absolute;
+        height: 24px;
+        width: 2px;
+        left: 31px;
+    }
+    &__search-icon{
+        width: 23px;
+        height: 22px;
+        margin: 0 13px 0 0;
+        img{
+            @include img-width();
+        }
+    }
+    &__magazine-btn{
+        background: var(--second-color);
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 96px;
+        width: 100%;
+        min-height: 48px;
+        @include border-second();
+    }
+    &__user{
+        width: 22px;
+        height: 22px;
+        img{
+            @include img-width();
+        }
+    }
+    &__bucket{
+        width: 22px;
+        height: 22px;
+        img{
+            @include img-width();
+        }
+    }
+}

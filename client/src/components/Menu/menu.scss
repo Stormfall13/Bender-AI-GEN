@@ -1,0 +1,18 @@
+@import url('../../App.css');
+@import '../../mixins';
+
+.wrapp__header{
+    @include content-width();
+    margin: 10px auto 0 auto; 
+}
+nav{
+    max-width: 700px;
+    width: 100%;
+}
+.link__menu{
+    padding: 12px 50px;
+    display: inline-block;
+    background: var(--first-color);
+    @include border-global();
+    margin-right: 20px;
+}

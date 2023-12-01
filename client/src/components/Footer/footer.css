@@ -1,0 +1,6 @@
+@import url("../../App.css");
+footer {
+  min-height: 185px;
+  margin: 95px 0 0 0;
+  background: var(--first-color);
+}/*# sourceMappingURL=footer.css.map */

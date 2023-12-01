@@ -1,0 +1,40 @@
+@import url('../../App.css');
+@import '../../mixins';
+
+
+.banner{
+    @include content-width();
+    padding: inherit;
+    display: flex;
+    flex-direction: column;
+    margin: 45px auto 0 auto;
+    @include border-second();
+    border: 1px solid var(--second-color);
+    &__img{
+        max-width: 1170px;
+        max-height: 280px;
+        overflow: hidden;
+        background: var(--second-color);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        img{
+            @include img-width();
+        } 
+    }
+    &__title{
+        max-width: 706px;
+        width: 100%;
+        min-height: 18px;
+        background: var(--first-color);
+        @include border-global();
+        margin: 20px 0 15px 20px;
+    }
+    &__text{
+        max-width: 426px;
+        width: 100%;
+        min-height: 15px;
+        background: var(--second-color);
+        @include border-global();
+        margin: 0 0 20px 20px;
+    }
+}

@@ -1,0 +1,209 @@
+@import url('../../App.css');
+@import '../../mixins';
+
+
+.first{
+    @include content-width();
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 20px;
+    justify-content: space-between;
+    border: 2px solid #6d14b8;
+    transition: 0.3s;
+    position: relative;
+    &__img{
+        max-width: 197px;
+        width: 100%;
+        max-height: 197px;
+        overflow: hidden;
+        background: var(--second-color);
+        @include border-second();
+        img{
+            @include img-width();
+        }
+    }
+    &__title{
+        max-width: 279.6px;
+        width: 100%;
+        min-height: 32px;
+        display: inline-block;
+        background: var(--first-color);
+        margin: 0 0 22px 0;
+        @include border-global();
+    }
+    &__text{
+        max-width: 887px;
+        width: 100%;
+        min-height: 106px;
+        display: inline-block;
+        background: var(--second-color);
+        @include border-global();
+    }
+    .wrapp__first{
+        display: flex;
+        justify-content: center;
+        max-width: 907px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .icon__add{
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+        left: 50%;
+        top: -22px;
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        img{
+            @include img-width();
+        }
+    }
+    .settings__panel{
+        display: none;
+        justify-content: space-between;
+        max-width: 375px;
+        width: 100%;
+        position: absolute;
+        right: 50px;
+        background: var(--first-color);
+        padding: 5px;
+        @include border-global();
+        div{
+            cursor: pointer;
+        }
+    }
+    .read__wrapp{
+        display: flex;
+        align-items: center;
+        background: #A6F5A9;
+        padding: 5px 11.7px;
+        @include border-global();
+        margin: 0 4px 0 0;
+        position: relative;
+        .read__img{
+            margin: 0 4px 0 0;
+        }
+        .read__text{
+            color: #344;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22.8px; 
+        }
+    }
+    .read__setting{
+        display: flex;
+    }
+    .up__down{
+        display: flex;
+    }
+    .up, .down, .trash, .setting{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        @include icon-width();
+        @include border-global();
+    }
+    .up:hover , .down:hover , .setting:hover , .dots:hover{
+        transition: 0.3s;
+        background: #D5FDD7;
+    }
+    .trash:hover{
+        transition: 0.3s;
+        background: #ffdfe0;
+    }
+    .up{
+        margin: 0 2px 0 0;
+    }
+    .dots{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        width: 26px;
+        height: 40px;
+        @include border-global();
+    }
+}
+
+.first:hover{
+    .icon__add{
+        display: block;
+        transition: 0.3s;
+    }
+    .settings__panel{
+        display: flex;
+        transition: 0.3s;
+    }
+}
+
+
+.first{
+    .read__wrapp::after{
+        content: 'Наполнение';
+        @include help-flag();
+        position: absolute;
+        top: 45px;
+        left: 0;
+        display: none;
+        transition: 0.3s;
+    }
+    .setting::after{
+        content: 'Параметры отображения';
+        @include help-flag();
+        position: absolute;
+        top: 51px;
+        right: 48px;
+        display: none;
+        transition: 0.3s; 
+    }
+    .up::after{
+        content: 'Переместить блок выше';
+        @include help-flag();
+        position: absolute;
+        top: 51px;
+        right: 0;
+        display: none;
+        transition: 0.3s; 
+    }
+    .down::after{
+        content: 'Переместить блок ниже';
+        @include help-flag();
+        position: absolute;
+        top: 51px;
+        right: -40px;
+        display: none;
+        transition: 0.3s; 
+    }
+    .trash::after{
+        content: 'Удалить';
+        @include help-flag();
+        position: absolute;
+        top: 51px;
+        right: 8px;
+        display: none;
+        transition: 0.3s; 
+    }
+    .dots::after{
+        content: 'Дополнительные инструменты';
+        @include help-flag();
+        position: absolute;
+        top: 51px;
+        left: 92%;
+        display: none;
+        transition: 0.3s; 
+        width: 57%;
+    }
+    .read__wrapp:hover::after,
+    .setting:hover::after,
+    .up:hover::after,
+    .down:hover::after,
+    .trash:hover::after,
+    .dots:hover::after
+    {
+        display: block;
+    }
+
+}

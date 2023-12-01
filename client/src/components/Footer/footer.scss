@@ -1,0 +1,8 @@
+@import url('../../App.css');
+@import '../../mixins';
+
+footer{
+    min-height: 185px;
+    margin: 95px 0 0 0;
+    background: var(--first-color);
+}
